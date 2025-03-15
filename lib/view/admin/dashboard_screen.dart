@@ -1,4 +1,6 @@
 import 'package:furniy_ar/utils/app_size.dart';
+import 'package:furniy_ar/view/admin/view_all_orders.dart';
+import 'package:furniy_ar/view/admin/view_furniture.dart';
 
 
 import 'package:furniy_ar/view/admin/view_users_screen.dart';
@@ -172,7 +174,11 @@ class DashboardScreen extends StatelessWidget {
                       elevation: 5,
                       child: InkWell(
                         onTap: () {
-
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ViewFurnitureScreen()),
+                          );
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(6.0),
@@ -211,8 +217,11 @@ class DashboardScreen extends StatelessWidget {
                       elevation: 5,
                       child: InkWell(
                         onTap: () {
-
-
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ViewAllOrders()),
+                          );
                         },
                         child: const Padding(
                           padding: EdgeInsets.all(6.0),
